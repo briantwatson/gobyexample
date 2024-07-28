@@ -36,4 +36,11 @@ func main() {
 		}
 		fmt.Println(n)
 	}
+
+	// Can use the following pattern to reference index and values of certain data structures
+	nums := []int{2, 3, 4}
+	for idx, num := range nums {
+		fmt.Println("idx:", idx)
+		fmt.Println("num:", num)
+	}
 }
