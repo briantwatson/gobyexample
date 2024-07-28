@@ -35,7 +35,7 @@ func main() {
 	s = append(s, "e", "f") // can append multiple
 	fmt.Println("apd:", s)
 
-	// Copy:  Copies elments into source, from target
+	// Copy:  Copies elements into source, from target
 	c := make([]string, len(s))
 	copy(c, s)
 	fmt.Println("cpy:", c)

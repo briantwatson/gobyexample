@@ -1,4 +1,4 @@
-// Go's associative data type, ala dictionaries has
+// Go's associative data type, akin to dictionaries
 package main
 
 import (
@@ -38,8 +38,8 @@ func main() {
 	clear(m)
 	fmt.Println("map:", m)
 
-	// Second return value used to indicate if key was present, used to disambiguate the zer value return type if not present
-	// Here the blank identifier, "_", is ues used to ignore the value
+	// Second return value used to indicate if key was present, used to disambiguate the zero value return type if not present
+	// Here the blank identifier, "_", is used to ignore the value
 	_, prs := m["k2"]
 	fmt.Println("prs:", prs)
 	m["k2"] = 13

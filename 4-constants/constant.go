@@ -1,9 +1,4 @@
-// Go supports constans of:
-// character
-// string
-// boolean
-// numeric values
-
+// Go supports constants of: character, string, boolean, and numeric values
 package main
 
 import (

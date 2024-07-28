@@ -31,7 +31,7 @@ func main() {
 		fmt.Println("key:", k)
 	}
 
-	// Range can also just iterate over values uses the blank identifier
+	// Range can also iterate over values using the blank identifier
 	for _, v := range kvs {
 		fmt.Println("val:", v)
 	}

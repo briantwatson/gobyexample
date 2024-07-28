@@ -25,11 +25,11 @@ func main() {
 	b = [...]int{1, 2, 3, 4, 5}
 	fmt.Println("dcl:", b)
 
-	// Can specify an index with ":", elements inbetween will be zeroed
+	// Can specify an index with ":", elements in-between will be zeroed
 	b = [...]int{100, 3: 400, 500}
 	fmt.Println("idx:", b)
 
-	// Can compose types to build multi-dimensionsal structures
+	// Can compose types to build multi-dimensional structures
 	var twoD [2][3]int
 	for i := 0; i < 2; i++ {
 		for j := 0; j < 3; j++ {

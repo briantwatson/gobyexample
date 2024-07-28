@@ -17,19 +17,19 @@ func main() {
 		fmt.Println(j)
 	}
 
-	// loop over a range N times
+	// Loop over a range N times
 	for i := range 3 {
 		fmt.Println("range", i)
 	}
 
-	// for without a condition-- will look until a `break` or `return`
+	// For without a condition-- will look until a `break` or `return`
 	for {
 		fmt.Println("no condition loop")
 		break
 	}
 
-	// also can `continue` to next iteration of loop
-	// here we should only print odds
+	// Also can `continue` to next iteration of loop
+	// Here we should only print odds
 	for n := range 6 {
 		if n%2 == 0 {
 			continue
