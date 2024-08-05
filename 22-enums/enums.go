@@ -31,6 +31,7 @@ func (s ServerState) String() string {
 
 // Emulates a state transition for a server
 func transition(s ServerState) ServerState {
+	fmt.Printf("Transition called with state: %s (int value: %d)\n", s, s) // Debug statement
 	switch s {
 	case StateIdle:
 		return StateConnected
@@ -41,5 +42,22 @@ func transition(s ServerState) ServerState {
 	default:
 		panic(fmt.Errorf("unknown state: %s", s))
 	}
-	return StateConnected
+}
+
+func main() {
+	ns := transition(StateIdle)
+	fmt.Println(ns)
+
+	ns2 := transition(ns)
+	fmt.Println(ns2)
+
+	// Works because ServerState has an underlying int type
+	ns3 := transition(3)
+	fmt.Println(ns3)
+
+	//The compiler complains about the following type mismatch, provides some compile time safety
+	//var i int = 3
+	// ns4 := transition(i)
+	//fmt.Println(ns4)
+
 }
