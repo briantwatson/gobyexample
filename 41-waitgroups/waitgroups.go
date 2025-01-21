@@ -24,7 +24,8 @@ func main() {
 		wg.Add(1)
 		go func() {
 
-			// Decrement the WaitGroup counter when the goroutine completes. This should be done in a defer statement to ensure it is always called.  This way the worker function can be called without needing to know about the WaitGroup.
+			// Decrement the WaitGroup counter when the goroutine completes. This should be done in a defer statement to ensure it is always called.
+			// This way the worker function can be called without needing to know about the WaitGroup.
 			defer wg.Done()
 			worker(i)
 		}()
